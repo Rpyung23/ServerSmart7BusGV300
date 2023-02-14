@@ -12,7 +12,7 @@ var cors_config = {
     "optionsSuccessStatus": 204
 }
 const app = express()
-
+const PORTAPI = 52689
 
 const net = require('net');
 const server = net.createServer()
@@ -113,7 +113,7 @@ server.listen(52688, ()=>
     console.log('SOCKET SERVER LISTEN', server.address().port)
 })
 
-app.listen(52689,()=>{
+app.listen(PORTAPI,()=>{
     console.log("REST ONLINE.....")
-    console.log('Escuchando por el puerto : '+3001)
+    console.log('Escuchando por el puerto : '+PORTAPI)
 })
