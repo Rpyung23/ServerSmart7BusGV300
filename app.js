@@ -43,7 +43,7 @@ server.on('connection', (socketClient)=>
         //socketClient.end()
         var oS = new cSocketCliente(socketClient,null)
         oS.insertarTrama(data)
-        oS.imprimirTramaDecodificada()
+        //oS.imprimirTramaDecodificada()
 
 
     })
