@@ -28,7 +28,7 @@ class CSocketCliente
             console.log(e)
         }
 
-        let tramaDividida = trama.split(',')
+        let tramaDividida = trama.toString(16).split(',')
 
         if (tramaDividida.length>0){
 
