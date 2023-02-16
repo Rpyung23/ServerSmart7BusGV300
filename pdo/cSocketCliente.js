@@ -38,6 +38,14 @@ class CSocketCliente
             if(tramaDividida[0] == '+ACK:GTHBD')
             {
                 ControllerVehiculo.registroControllerVehiculo(tramaDividida[2])
+            }else if(tramaDividida[0] == '+RESP:GTFRI')
+            {
+                ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
+                    1,tramaDividida[2] == '' ? 0 : parseFloat(tramaDividida[2]),
+                    tramaDividida[13] == '1998-06-11 00:00:00' ? 0 : (tramaDividida[13].splice(0,3)+"-"+tramaDividida[13].splice(4,5)+"-"+tramaDividida[13].splice(6,7)+" "+tramaDividida[13].splice(8,9)+":"+tramaDividida[13].splice(10,11)+":"+tramaDividida[13].splice(12,13)),
+                    tramaDividida[11] == '' ? 0 : parseFloat(tramaDividida[11]),
+                    tramaDividida[9] == '' ? 0 : parseInt(tramaDividida[9]),
+                    this.getF0F1F2.getSatelites)
             }
         }
 
