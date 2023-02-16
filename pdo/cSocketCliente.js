@@ -31,7 +31,7 @@ class CSocketCliente
         console.log("---------------------------------------------------------------------------------------")
         console.log(trama)
 
-        let tramaDividida = trama.toString(16).split(',')
+        /*let tramaDividida = trama.toString(16).split(',')
 
         if (tramaDividida.length>0){
 
@@ -39,7 +39,7 @@ class CSocketCliente
             {
                 ControllerVehiculo.registroControllerVehiculo(tramaDividida[2])
             }
-        }
+        }*/
 
 
 
