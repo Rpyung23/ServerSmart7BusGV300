@@ -66,7 +66,7 @@ class CSocketCliente
                 const nuevaFecha = fechaObj.getFullYear().toString() +"-"+
                     (fechaObj.getMonth() + 1).toString().padStart(2, "0") +"-"+
                     fechaObj.getDate().toString().padStart(2, "0") + " " +
-                    fechaObj.getHours().toString().padStart(2, "0") +":"
+                    fechaObj.getHours().toString().padStart(2, "0") +":"+
                     fecha.substr(10, 2) +":"+fecha.substr(12, 2);
 
                 console.log(nuevaFecha); // Imprime la fecha y hora original menos 5 horas
