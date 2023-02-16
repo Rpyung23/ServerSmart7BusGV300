@@ -22,7 +22,7 @@ class CSocketCliente
                 var aux = trama[i].toString(16)
                 tramaString=tramaString+" "+(aux.length == 1 ? "0"+aux : aux)
             }*/
-            //ControllerTramaSocket.registerControllerTramaSocket('serie',trama)
+            ControllerTramaSocket.registerControllerTramaSocket('serie',trama)
         }catch (e) {
             console.log("ERROR AL INSERTAR LA TRAMA SOCKET")
             console.log(e)
@@ -31,7 +31,7 @@ class CSocketCliente
         console.log("************************************************************************************")
         console.log(trama)
 
-        /*let tramaDividida = trama.toString(16).split(',')
+        let tramaDividida = trama.split(',')
 
         if (tramaDividida.length>0){
 
@@ -39,7 +39,7 @@ class CSocketCliente
             {
                 ControllerVehiculo.registroControllerVehiculo(tramaDividida[2])
             }
-        }*/
+        }
 
 
 

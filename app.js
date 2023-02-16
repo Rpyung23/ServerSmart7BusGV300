@@ -27,6 +27,8 @@ app.use(express.urlencoded({ extended: false,limit:'80mb' }));
 
 server.on('connection', (socketClient)=>
 {
+
+
     console.log('NUEVO CLIENTE CONECTADO '+socketClient.remoteAddress)
     //socketClient.setTimeout(TIMEOUT_1HORA)
 
@@ -42,7 +44,7 @@ server.on('connection', (socketClient)=>
         console.log("--------------------------------------------------------------------------")
         //socketClient.end()
         var oS = new cSocketCliente(socketClient,null)
-        oS.insertarTrama(data)
+        oS.insertarTrama(data.toString())
         //oS.imprimirTramaDecodificada()
 
 
