@@ -63,11 +63,11 @@ class CSocketCliente
                 );
                 fechaObj.setHours(fechaObj.getHours() - 5);
 
-                const nuevaFecha = fechaObj.getFullYear().toString() +
-                    (fechaObj.getMonth() + 1).toString().padStart(2, "0") +
+                const nuevaFecha = fechaObj.getFullYear().toString() +"-"+
+                    (fechaObj.getMonth() + 1).toString().padStart(2, "0") +"-"+
                     fechaObj.getDate().toString().padStart(2, "0") + " " +
-                    fechaObj.getHours().toString().padStart(2, "0") +
-                    fechaObj.getMinutes().toString().padStart(2, "0") +
+                    fechaObj.getHours().toString().padStart(2, "0") +":"
+                    fechaObj.getMinutes().toString().padStart(2, "0") +":"
                     fechaObj.getSeconds().toString().padStart(2, "0");
 
                 console.log(nuevaFecha); // Imprime la fecha y hora original menos 5 horas
