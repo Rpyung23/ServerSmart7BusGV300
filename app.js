@@ -38,7 +38,7 @@ server.on('connection', (socketClient)=>
     socketClient.on('data', (data)=>
     {
         console.log("SOCKET GV 300 : "+socketClient.remoteAddress+" DATA : ")
-        console.log(data)
+        console.log(data.toString())
         console.log("--------------------------------------------------------------------------")
         //socketClient.end()
         var oS = new cSocketCliente(socketClient,null)
