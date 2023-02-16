@@ -41,7 +41,7 @@ class CSocketCliente
             }else if(tramaDividida[0] == '+RESP:GTFRI')
             {
                 console.log("FEcHA MONI : "+tramaDividida[13])
-                var fecha = tramaDividida[13]
+                var fecha = tramaDividida[13].toString()
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
                     1,tramaDividida[2] == '' ? 0 : parseFloat(tramaDividida[2]),
                     tramaDividida[13] == '' ? '1998-06-11 00:00:00' : (fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)),
