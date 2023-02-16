@@ -44,11 +44,12 @@ class CSocketCliente
                 var fechaInt = tramaDividida[13]
                 var fecha = fechaInt.toString()
                 var year  = fecha.substr(0,4)
-                var mm = fecha.substr(5,6)
-                var day = fecha.substr(7,8)
-                var hh = fecha.substr(9,10)
-                var min = fecha.substr(11,12)
-                var ss = fecha.substr(13,14)
+                var mm = fecha.substr(4,2)
+                var day = fecha.substr(6,2)
+                var hh = fecha.substr(8,2)
+                var min = fecha.substr(10,2)
+                var ss = fecha.substr(12,2)
+
 
                 //fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
