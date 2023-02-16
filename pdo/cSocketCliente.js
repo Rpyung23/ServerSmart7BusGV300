@@ -54,7 +54,7 @@ class CSocketCliente
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
                     1,tramaDividida[8] == '' ? 0 : parseFloat(tramaDividida[8]),
                     tramaDividida[13] == '' ? '1998-06-11 00:00:00' : fecha,
-                    tramaDividida[12] == '' ? 0 : parseFloat(tramaDividida[12]),
+                    tramaDividida[10] == '' ? 0 : parseFloat(tramaDividida[10]),
                     tramaDividida[11] == '' ? 0 : parseInt(tramaDividida[11]),
                     0)
             }
