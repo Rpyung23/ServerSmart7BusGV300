@@ -43,10 +43,17 @@ class CSocketCliente
                 console.log("FEcHA MONI : "+tramaDividida[13])
                 var fechaInt = tramaDividida[13]
                 var fecha = fechaInt.toString()
+                var year  = fecha.splice(0,3)
+                var mm = fecha.splice(4,5)
+                var day = fecha.splice(6,7)
+                var hh = fecha.splice(8,9)
+                var dd = fecha.splice(10,11)
+                var ss = fecha.splice(12,13)
+
                 //fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
                     1,tramaDividida[2] == '' ? 0 : parseFloat(tramaDividida[2]),
-                    tramaDividida[13] == '' ? '1998-06-11 00:00:00' : (fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)),
+                    tramaDividida[13] == '' ? '1998-06-11 00:00:00' : fecha,
                     tramaDividida[11] == '' ? 0 : parseFloat(tramaDividida[11]),
                     tramaDividida[9] == '' ? 0 : parseInt(tramaDividida[9]),
                     0)
