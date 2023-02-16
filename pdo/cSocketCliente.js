@@ -40,6 +40,7 @@ class CSocketCliente
                 ControllerVehiculo.registroControllerVehiculo(tramaDividida[2])
             }else if(tramaDividida[0] == '+RESP:GTFRI')
             {
+                console.log("FEcHA MONI : "+tramaDividida[13])
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
                     1,tramaDividida[2] == '' ? 0 : parseFloat(tramaDividida[2]),
                     tramaDividida[13] == '' ? '1998-06-11 00:00:00' : (tramaDividida[13].splice(0,3)+"-"+tramaDividida[13].splice(4,5)+"-"+tramaDividida[13].splice(6,7)+" "+tramaDividida[13].splice(8,9)+":"+tramaDividida[13].splice(10,11)+":"+tramaDividida[13].splice(12,13)),
