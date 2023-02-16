@@ -43,12 +43,12 @@ class CSocketCliente
                 console.log("FEcHA MONI : "+tramaDividida[13])
                 var fechaInt = tramaDividida[13]
                 var fecha = fechaInt.toString()
-                var year  = fecha.substr(0,3)
-                var mm = fecha.substr(4,5)
-                var day = fecha.substr(6,7)
-                var hh = fecha.substr(8,9)
-                var min = fecha.substr(10,11)
-                var ss = fecha.substr(12,13)
+                var year  = fecha.substr(0,4)
+                var mm = fecha.substr(5,6)
+                var day = fecha.substr(7,8)
+                var hh = fecha.substr(9,10)
+                var min = fecha.substr(11,12)
+                var ss = fecha.substr(13,14)
 
                 //fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
