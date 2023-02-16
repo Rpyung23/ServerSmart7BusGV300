@@ -82,7 +82,7 @@ class CSocketCliente
                     tramaDividida[13] == '' ? '1998-06-11 00:00:00' : nuevaFecha,
                     tramaDividida[12] == '' ? 0 : parseFloat(tramaDividida[12]),
                     tramaDividida[11] == '' ? 0 : parseFloat(tramaDividida[11]),
-                    tramaDividida[9] == '' ? 0 : parseInt(tramaDividida[9])
+                    tramaDividida[9] == '' ? 0 : parseInt(tramaDividida[9]))
 
                 try{
                     ControllerVehiculo.registroControllerHistorialMonitoreoVehiculo(tramaDividida[2],
