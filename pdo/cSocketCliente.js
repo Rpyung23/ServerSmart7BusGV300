@@ -42,7 +42,7 @@ class CSocketCliente
             {
                 console.log("FEcHA MONI : "+tramaDividida[13])
                 var fechaInt = tramaDividida[13]
-                var fecha = fecha.toString()
+                var fecha = fechaInt.toString()
                 //fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
                     1,tramaDividida[2] == '' ? 0 : parseFloat(tramaDividida[2]),
