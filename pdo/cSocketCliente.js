@@ -47,13 +47,13 @@ class CSocketCliente
                 var mm = fecha.substr(4,5)
                 var day = fecha.substr(6,7)
                 var hh = fecha.substr(8,9)
-                var dd = fecha.substr(10,11)
+                var min = fecha.substr(10,11)
                 var ss = fecha.substr(12,13)
 
                 //fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
                     1,tramaDividida[8] == '' ? 0 : parseFloat(tramaDividida[8]),
-                    tramaDividida[13] == '' ? '1998-06-11 00:00:00' : fecha,
+                    tramaDividida[13] == '' ? '1998-06-11 00:00:00' : (year+"-"+mm+"-"+day+" "+hh+":"+min+":"+ss),
                     tramaDividida[12] == '' ? 0 : parseFloat(tramaDividida[12]),
                     tramaDividida[11] == '' ? 0 : parseInt(tramaDividida[11]),
                     0)
