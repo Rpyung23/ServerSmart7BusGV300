@@ -28,6 +28,22 @@ class CSocketCliente
             console.log(e)
         }
 
+        let tramaDividida = trama.split(',')
+
+        if (tramaDividida.length>0){
+
+            if(tramaDividida[0] == '+ACK:GTHBD')
+            {
+                ControllerVehiculo.registroControllerVehiculo(tramaDividida[2])
+            }
+        }
+
+
+
+
+
+
+
         /**  FIN TRAMA SOCKET
         switch (trama[0].toString(16)){
             case 'f0':
