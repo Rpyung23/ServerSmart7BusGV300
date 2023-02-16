@@ -52,7 +52,7 @@ class CSocketCliente
 
                 //fecha.splice(0,3)+"-"+fecha.splice(4,5)+"-"+fecha.splice(6,7)+" "+fecha.splice(8,9)+":"+fecha.splice(10,11)+":"+fecha.splice(12,13)
                 ControllerVehiculo.registroControllerMonitoreoVehiculo(tramaDividida[2],
-                    1,tramaDividida[2] == '' ? 0 : parseFloat(tramaDividida[2]),
+                    1,tramaDividida[8] == '' ? 0 : parseFloat(tramaDividida[8]),
                     tramaDividida[13] == '' ? '1998-06-11 00:00:00' : fecha,
                     tramaDividida[11] == '' ? 0 : parseFloat(tramaDividida[11]),
                     tramaDividida[9] == '' ? 0 : parseInt(tramaDividida[9]),
