@@ -83,6 +83,18 @@ class CSocketCliente
                     tramaDividida[12] == '' ? 0 : parseFloat(tramaDividida[12]),
                     tramaDividida[11] == '' ? 0 : parseFloat(tramaDividida[11]),
                     0)
+
+                try{
+                    ControllerVehiculo.registroControllerHistorialMonitoreoVehiculo(tramaDividida[2],
+                        1,tramaDividida[8] == '' ? 0 : parseFloat(tramaDividida[8]),
+                        tramaDividida[13] == '' ? '1998-06-11 00:00:00' : nuevaFecha,
+                        tramaDividida[12] == '' ? 0 : parseFloat(tramaDividida[12]),
+                        tramaDividida[11] == '' ? 0 : parseFloat(tramaDividida[11]),
+                        0)
+                }catch (e) {
+                    console.log("HISTORIAL CALL CONTROLLER")
+                    console.log(e)
+                }
             }
         }
 
