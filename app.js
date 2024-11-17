@@ -67,7 +67,6 @@ server.on('listening',()=>{
     console.log("SOCKET SERVER LISTENING....")
 })
 
-
 server.on('error',(error)=>{
     console.log("**********************************************************************")
     console.log("SOCKET SERVER ERROR : ....")
@@ -76,6 +75,15 @@ server.on('error',(error)=>{
     console.log("**********************************************************************")
 })
 
+server.listen(52688, ()=>
+{
+    console.log('SOCKET SERVER', server.address().port)
+})
+
+app.listen(PORTAPI,()=>{
+    console.log("REST ONLINE "+PORTAPI+".....")
+    //console.log('Escuchando por el puerto : '+PORTAPI)
+})
 app.post("/sendComando",function (req,res)
 {
     console.log("COMANDO RECIVO : "+req.body.comando)
@@ -108,12 +116,3 @@ app.post("/sendComando",function (req,res)
     }
 })
 
-server.listen(52688, ()=>
-{
-    console.log('SOCKET SERVER LISTEN', server.address().port)
-})
-
-app.listen(PORTAPI,()=>{
-    console.log("REST ONLINE.....")
-    console.log('Escuchando por el puerto : '+PORTAPI)
-})
