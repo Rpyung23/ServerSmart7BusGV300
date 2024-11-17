@@ -31,9 +31,6 @@ server.on('connection', (socketClient)=>
 
     console.log('NUEVO CLIENTE CONECTADO '+socketClient.remoteAddress)
     //socketClient.setTimeout(TIMEOUT_1HORA)
-
-
-
     //var oS = new cSocketCliente(socket,null)
     /*mListaSocketClientes.push(socket)*/
 
@@ -44,7 +41,7 @@ server.on('connection', (socketClient)=>
         console.log(data.toString())
         console.log("--------------------------------------------------------------------------")
         //socketClient.end()
-        var oS = new cSocketCliente(socketClient,null)
+        //var oS = new cSocketCliente(socketClient,null)
         //oS.insertarTrama(data.toString())
         //oS.imprimirTramaDecodificada()
 
