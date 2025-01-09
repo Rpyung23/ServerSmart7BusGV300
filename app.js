@@ -45,8 +45,8 @@ server.on('connection', (socketClient)=>
 
             if (data.toString('hex').substring(0,8) == '00000000')
             {
-                console.log(data.toString('hex'))
-                console.log("DATA FIELD : "+data.toString('hex').substring(10,16))
+                //console.log(data.toString('hex'))
+                console.log("DATA FIELD : "+data.toString('hex').substring(8,16))
                 console.log("Codec ID : "+data.toString('hex').substring(16,18))
                 console.log("Number of Data 1 (Records) : "+data.toString('hex').substring(18,20))
             }
