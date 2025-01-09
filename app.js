@@ -40,6 +40,7 @@ server.on('connection', (socketClient)=>
         console.log(data)
         if(data.toString('hex').substring(0,4) == '000f'){
             console.log('IMEI : '+data.toString())
+            socketClient.write('01')
         }
 
         //console.log(data.toString())
