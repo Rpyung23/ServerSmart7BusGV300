@@ -38,7 +38,7 @@ server.on('connection', (socketClient)=>
     {
         console.log("SOCKET : "+socketClient.remoteAddress)
         console.log(data)
-        if(data[0]+data[1] == '000f'){
+        if(data.toString('hex').substring(0,4) == '000f'){
             console.log('IMEI : '+data.toString())
         }
 
