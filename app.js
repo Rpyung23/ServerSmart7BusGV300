@@ -43,9 +43,7 @@ server.on('connection', (socketClient)=>
             socketClient.write(Buffer.from('01','hex'))
         }else{
 
-            var hexString = data.toString('hex');
-
-            if (hexString.substring(0,8) == '00000000')
+            if (data.toString('hex').substring(0,8) == '00000000')
             {
                 console.log(data.toString('hex'))
                 console.log("DATA FIELD : "+data.toString('hex').substring(10,16))
