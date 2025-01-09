@@ -36,10 +36,14 @@ server.on('connection', (socketClient)=>
 
     socketClient.on('data', (data)=>
     {
-        console.log("SOCKET GV 300 : "+socketClient.remoteAddress+" DATA : ")
+        console.log("SOCKET : "+socketClient.remoteAddress)
         console.log(data)
-        console.log(data.toString())
-        console.log("--------------------------------------------------------------------------")
+        if(data[0]+data[1] == '000f'){
+            console.log('IMEI : '+data.toString())
+        }
+
+        //console.log(data.toString())
+        //console.log("--------------------------------------------------------------------------")
         //socketClient.end()
         //var oS = new cSocketCliente(socketClient,null)
         //oS.insertarTrama(data.toString())
@@ -81,7 +85,7 @@ server.listen(52688, ()=>
 })
 
 app.listen(PORTAPI,()=>{
-    console.log("REST ONLINE "+PORTAPI+".....")
+    //console.log("REST ONLINE "+PORTAPI+".....")
     //console.log('Escuchando por el puerto : '+PORTAPI)
 })
 app.post("/sendComando",function (req,res)
