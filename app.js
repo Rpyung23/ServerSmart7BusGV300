@@ -42,12 +42,15 @@ server.on('connection', (socketClient)=>
             console.log('IMEI : '+data.toString())
             socketClient.write(Buffer.from('01','hex'))
         }else{
-            if (data.toString('hex').substring(0,8) == '00000000')
+
+            var hexString = data.toString('hex');
+
+            if (hexString.substring(0,8) == '00000000')
             {
                 console.log(data.toString('hex'))
                 console.log("DATA FIELD : "+data.toString('hex').substring(10,16))
-                console.log("Codec ID : "+data.toString('hex').substring(17,18))
-                console.log("Number of Data 1 (Records) : "+data.toString('hex').substring(19,20))
+                console.log("Codec ID : "+data.toString('hex').substring(16,18))
+                console.log("Number of Data 1 (Records) : "+data.toString('hex').substring(18,20))
             }
         }
 
